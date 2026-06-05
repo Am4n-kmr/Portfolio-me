@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aman Kumar — B.Tech IT student at NSEC Kolkata. Frontend developer passionate about building modern web experiences."
+    />
+    <meta property="og:title" content="Aman Kumar · Portfolio" />
+    <meta property="og:type" content="website" />
+    <title>Portfolio - Aman Kumar</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <style></style>
+  </head>
+
+  <body>
+    <div
+      id="progress-bar"
+      role="progressbar"
+      aria-label="Page scroll progress"
+    ></div>
+
+    <a
+      href="#main"
+      style="
+        position: absolute;
+        left: -9999px;
+        top: 4px;
+        padding: 8px 16px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 4px;
+        font-weight: 600;
+        z-index: 1000;
+      "
+      onfocus="this.style.left = '4px'"
+      onblur="this.style.left = '-9999px'"
+      >Skip to content</a
+    >
+
+    <!-- ── Nav ── -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+      <a class="nav-logo" href="#" aria-label="Aman Kumar Home"
+        >AK<span>.</span></a
+      >
+
+      <div class="nav-links" role="list">
+        <a href="#skills" role="listitem">Skills</a>
+        <a href="#profiles" role="listitem">Coding</a>
+        <a href="#projects" role="listitem">Projects</a>
+        <a href="#education" role="listitem">Education</a>
+        <a href="#certifications" role="listitem">Certs</a>
+        <a href="#contact" role="listitem">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <div class="nav-socials" aria-label="Social links">
+          <a
+            href="https://github.com/am4n-kmr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+          ></a>
+        </div>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle light/dark mode"
+        >
+          <i class="fa-solid fa-moon" aria-hidden="true" id="themeIcon"></i>
+        </button>
+        <button
+          class="nav-menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- mobile drawer -->
+    <div
+      class="nav-drawer"
+      id="navDrawer"
+      role="dialog"
+      aria-label="Mobile navigation"
+      aria-modal="true"
+    >
+      <div class="drawer-logo">AK<span>.</span></div>
+      <div class="drawer-overlay" id="drawerOverlay"></div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <a href="#skills" onclick="closeDrawer()">Skills</a>
+      <a href="#education" onclick="closeDrawer()">Education</a>
+      <a href="#certifications" onclick="closeDrawer()">Certs</a>
+      <a href="#profiles" onclick="closeDrawer()">Coding</a>
+      <a href="#projects" onclick="closeDrawer()">Projects</a>
+      <a href="#contact" onclick="closeDrawer()">Contact</a>
+    </div>
+
+    <main id="main">
+      <!-- ═══════════════ HERO ═══════════════ -->
+      <section aria-labelledby="hero-name">
+        <div class="container">
+          <div class="hero-section">
+            <!-- LEFT -->
+            <div class="hero-left reveal">
+              <p class="hero-eyebrow">B.Tech IT · NSEC Kolkata · 2026</p>
+
+              <h1 class="hero-hello" id="hero-name">Hello<span>.</span></h1>
+
+              <div class="hero-sub">
+                <span class="hero-iam"> <span>I'm</span> Aman Kumar </span>
+                <span class="hero-role">Software Developer</span>
+              </div>
+
+              <p class="hero-bio">
+                Passionate Software Developer with a strong foundation in Data
+                Structures & Algorithms, Java, and modern web technologies. I
+                enjoy transforming complex challenges into efficient, scalable
+                solutions while building clean, high-performance applications.
+                Driven by continuous learning and problem-solving, I strive to
+                create intuitive digital experiences that deliver real-world
+                value.
+              </p>
+
+              <div class="hero-ctas">
+                <a href="#projects" class="btn-primary">
+                  See my work
+                  <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                </a>
+
+                <a href="#contact" class="btn-outline">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  Let's Connect
+                </a>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero-right reveal" style="transition-delay: 180ms">
+              <div
+                class="browser-mockup"
+                role="img"
+                aria-label="Portfolio preview screenshot"
+              >
+                <div class="mockup-inner">
+                  <img
+                    src="https://res.cloudinary.com/ddxk7ou6h/image/upload/q_auto/f_auto/v1780563283/WhatsApp_Image_2026-06-04_at_12.03.45_PM_ez4zio.jpg"
+                    alt="Portfolio Preview"
+                    class="portfolio-image"
+                  />
+                </div>
+
+                <div class="hero-dot tl"></div>
+                <div class="hero-dot br"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ SKILLS ═══════════════ -->
+      <section
+        id="skills"
+        class="skills-section"
+        aria-labelledby="skills-heading"
+      >
+        <div class="container">
+          <span class="section-label reveal">Capabilities</span>
+          <h2 class="section-title reveal" id="skills-heading">
+            What I work with
+          </h2>
+
+          <div class="skills-intro-grid reveal">
+            <p class="skills-desc">
+              My technical toolkit spans modern frontend technologies,
+              programming languages, version control systems, and database
+              management tools. I have hands-on experience building responsive
+              and user-friendly web applications using HTML, CSS, JavaScript,
+              and contemporary development practices. Alongside frontend
+              development, I possess a strong foundation in Java and Data
+              Structures & Algorithms, enabling me to approach problems with an
+              analytical and performance-oriented mindset.<br />
+
+              As a fresher, I am committed to writing clean, maintainable, and
+              well-structured code while continuously improving my technical
+              expertise. I enjoy learning new technologies, exploring industry
+              best practices, and applying them to real-world projects.
+            </p>
+
+            <div class="skill-chips-grid">
+              <div class="skill-chip chip-html">
+                <div class="skill-chip-icon">
+                  <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                </div>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-chip chip-css">
+                <div class="skill-chip-icon">
+                  <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                </div>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-chip chip-js">
+                <div class="skill-chip-icon">
+                  <i class="fa-brands fa-js" aria-hidden="true"></i>
+                </div>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-chip chip-react">
+                <div class="skill-chip-icon">
+                  <i class="fa-brands fa-react" aria-hidden="true"></i>
+                </div>
+                <span>React</span>
+              </div>
+              <div class="skill-chip chip-node">
+                <div class="skill-chip-icon">
+                  <i class="fa-brands fa-node-js" aria-hidden="true"></i>
+                </div>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-chip chip-java">
+                <div class="skill-chip-icon">
+                  <i class="fa-brands fa-java" aria-hidden="true"></i>
+                </div>
+                <span>Java</span>
+              </div>
+              <div class="skill-chip chip-py">
+                <div class="skill-chip-icon">
+                  <i class="fa-brands fa-python" aria-hidden="true"></i>
+                </div>
+                <span>Python</span>
+              </div>
+              <div class="skill-chip chip-git">
+                <div class="skill-chip-icon">
+                  <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
+                </div>
+                <span>Git</span>
+              </div>
+              <div class="skill-chip chip-sql">
+                <div class="skill-chip-icon">
+                  <i class="fa-solid fa-database" aria-hidden="true"></i>
+                </div>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- radial rings -->
+          <div class="skill-rings reveal">
+            <div class="ring-card">
+              <svg
+                class="ring-svg"
+                viewBox="0 0 80 80"
+                role="img"
+                aria-label="Java 90%"
+              >
+                <circle class="ring-bg" cx="40" cy="40" r="35" />
+                <circle
+                  class="ring-fill"
+                  cx="40"
+                  cy="40"
+                  r="35"
+                  data-pct="90"
+                  style="stroke: var(--v-blue)"
+                />
+              </svg>
+              <span class="ring-label">Java</span
+              ><span class="ring-pct">90%</span>
+            </div>
+
+            <div class="ring-card">
+              <svg
+                class="ring-svg"
+                viewBox="0 0 80 80"
+                role="img"
+                aria-label="Frontend 85%"
+              >
+                <circle class="ring-bg" cx="40" cy="40" r="35" />
+                <circle
+                  class="ring-fill"
+                  cx="40"
+                  cy="40"
+                  r="35"
+                  data-pct="85"
+                  style="stroke: var(--v-amber)"
+                />
+              </svg>
+              <span class="ring-label">Frontend</span
+              ><span class="ring-pct">85%</span>
+            </div>
+
+            <div class="ring-card">
+              <svg
+                class="ring-svg"
+                viewBox="0 0 80 80"
+                role="img"
+                aria-label="Backend 60%"
+              >
+                <circle class="ring-bg" cx="40" cy="40" r="35" />
+                <circle
+                  class="ring-fill"
+                  cx="40"
+                  cy="40"
+                  r="35"
+                  data-pct="60"
+                  style="stroke: var(--v-purple)"
+                />
+              </svg>
+              <span class="ring-label">Backend</span
+              ><span class="ring-pct">60%</span>
+            </div>
+            <div class="ring-card">
+              <svg
+                class="ring-svg"
+                viewBox="0 0 80 80"
+                role="img"
+                aria-label="Databases 60%"
+              >
+                <circle class="ring-bg" cx="40" cy="40" r="35" />
+                <circle
+                  class="ring-fill"
+                  cx="40"
+                  cy="40"
+                  r="35"
+                  data-pct="60"
+                  style="stroke: var(--v-cyan)"
+                />
+              </svg>
+              <span class="ring-label">Databases</span
+              ><span class="ring-pct">60%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ CODING JOURNEY ═══════════════ -->
+
+      <section id="profiles" aria-labelledby="profiles-heading">
+        <div class="container">
+          <span class="section-label reveal">Problem Solving</span>
+          <h2 class="section-title reveal" id="profiles-heading">
+            Coding Journey
+          </h2>
+
+          <div class="profiles-grid reveal">
+            <a
+              href="https://leetcode.com/u/Aman_kumar26/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profile-card pc-lc"
+              aria-label="LeetCode profile"
+            >
+              <div class="profile-header">
+                <div class="platform-icon">LC</div>
+                <div>
+                  <p class="platform-name">LeetCode</p>
+                  <p class="platform-handle">@Amankumar</p>
+                </div>
+              </div>
+              <div class="profile-stats">
+                <div class="p-stat">
+                  <p class="p-stat-val">330+</p>
+                  <p class="p-stat-label">Solved</p>
+                </div>
+                <div class="p-stat">
+                  <p class="p-stat-val">Unrated</p>
+                  <p class="p-stat-label">Rating</p>
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square profile-link-icon"
+                aria-hidden="true"
+              ></i>
+            </a>
+
+            <a
+              href="https://www.geeksforgeeks.org/profile/amankmr?tab=activity"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profile-card pc-gfg"
+              aria-label="GeeksforGeeks profile"
+            >
+              <div class="profile-header">
+                <div class="platform-icon">GfG</div>
+                <div>
+                  <p class="platform-name">GeeksforGeeks</p>
+                  <p class="platform-handle">@amnkmr</p>
+                </div>
+              </div>
+              <div class="profile-stats">
+                <div class="p-stat">
+                  <p class="p-stat-val">200+</p>
+                  <p class="p-stat-label">Problems</p>
+                </div>
+                <div class="p-stat">
+                  <p class="p-stat-val">630</p>
+                  <p class="p-stat-label">Score</p>
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square profile-link-icon"
+                aria-hidden="true"
+              ></i>
+            </a>
+
+            <a
+              href="https://codeforces.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profile-card pc-cf"
+              aria-label="Codeforces profile"
+            >
+              <div class="profile-header">
+                <div class="platform-icon">CF</div>
+                <div>
+                  <p class="platform-name">Codeforces</p>
+                  <p class="platform-handle">@am4n</p>
+                </div>
+              </div>
+              <div class="profile-stats">
+                <div class="p-stat">
+                  <p class="p-stat-val">900</p>
+                  <p class="p-stat-label">Rating</p>
+                </div>
+                <div class="p-stat">
+                  <p class="p-stat-val">Newbie</p>
+                  <p class="p-stat-label">Rank</p>
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square profile-link-icon"
+                aria-hidden="true"
+              ></i>
+            </a>
+
+            <a
+              href="https://hackerrank.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profile-card pc-hr"
+              aria-label="HackerRank profile"
+            >
+              <div class="profile-header">
+                <div class="platform-icon">HR</div>
+                <div>
+                  <p class="platform-name">HackerRank</p>
+                  <p class="platform-handle">@aman_kumar</p>
+                </div>
+              </div>
+              <div class="profile-stats">
+                <div class="p-stat">
+                  <p class="p-stat-val">5 ⭐</p>
+                  <p class="p-stat-label">Java</p>
+                </div>
+                <div class="p-stat">
+                  <p class="p-stat-val">4 ⭐</p>
+                  <p class="p-stat-label">Problem Solving</p>
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square profile-link-icon"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </div>
+
+          <!-- DSA Proficiency Bubbles -->
+          <div class="dsa-section reveal">
+            <p class="dsa-heading">DSA Proficiency</p>
+            <div class="dsa-bubbles">
+              <div class="dsa-bubble lvl-strong">
+                <span class="bubble-name">Arrays</span>
+                <span class="bubble-lvl">Strong</span>
+              </div>
+
+              <div class="dsa-bubble lvl-strong">
+                <span class="bubble-name">Strings</span>
+                <span class="bubble-lvl">Strong</span>
+              </div>
+
+              <div class="dsa-bubble lvl-good">
+                <span class="bubble-name">Linked List</span>
+                <span class="bubble-lvl">Good</span>
+              </div>
+
+              <div class="dsa-bubble lvl-good">
+                <span class="bubble-name">Stack & Queue</span>
+                <span class="bubble-lvl">Good</span>
+              </div>
+
+              <div class="dsa-bubble lvl-good">
+                <span class="bubble-name">Binary Search</span>
+                <span class="bubble-lvl">Good</span>
+              </div>
+
+              <div class="dsa-bubble lvl-good">
+                <span class="bubble-name">Recursion</span>
+                <span class="bubble-lvl">Good</span>
+              </div>
+
+              <div class="dsa-bubble lvl-mid">
+                <span class="bubble-name">Trees</span>
+                <span class="bubble-lvl">Intermediate</span>
+              </div>
+
+              <div class="dsa-bubble lvl-mid">
+                <span class="bubble-name">Hashing</span>
+                <span class="bubble-lvl">Intermediate</span>
+              </div>
+
+              <div class="dsa-bubble lvl-mid">
+                <span class="bubble-name">Sorting</span>
+                <span class="bubble-lvl">Intermediate</span>
+              </div>
+
+              <div class="dsa-bubble lvl-mid">
+                <span class="bubble-name">Two Pointers</span>
+                <span class="bubble-lvl">Intermediate</span>
+              </div>
+
+              <div class="dsa-bubble lvl-learning">
+                <span class="bubble-name">Graphs</span>
+                <span class="bubble-lvl">Learning</span>
+              </div>
+
+              <div class="dsa-bubble lvl-learning">
+                <span class="bubble-name">Dynamic Prog.</span>
+                <span class="bubble-lvl">Learning</span>
+              </div>
+
+              <div class="dsa-bubble lvl-learning">
+                <span class="bubble-name">Heaps</span>
+                <span class="bubble-lvl">Learning</span>
+              </div>
+
+              <div class="dsa-bubble lvl-learning">
+                <span class="bubble-name">Tries</span>
+                <span class="bubble-lvl">Learning</span>
+              </div>
+            </div>
+
+            <!-- legend -->
+            <div class="dsa-legend">
+              <span class="legend-dot lvl-strong"></span
+              ><span class="legend-text">Strong</span>
+              <span class="legend-dot lvl-good"></span
+              ><span class="legend-text">Good</span>
+              <span class="legend-dot lvl-mid"></span
+              ><span class="legend-text">Intermediate</span>
+              <span class="legend-dot lvl-learning"></span
+              ><span class="legend-text">Learning</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ PROJECTS ═══════════════ -->
+      <section
+        id="projects"
+        class="projects-section"
+        aria-labelledby="projects-heading"
+      >
+        <div class="container">
+          <span class="section-label reveal">Work</span>
+          <h2 class="section-title reveal" id="projects-heading">Projects</h2>
+
+          <div class="projects-grid reveal">
+            <article class="project-card">
+              <div class="project-preview">
+                <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+                <span class="project-preview-label">Web App</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Travel Planning Website</h3>
+                <p class="project-desc">
+                  A full-stack travel platform that helps users explore
+                  destinations, plan trips, and manage bookings seamlessly.
+                </p>
+                <div class="project-tags">
+                  <span class="tech-tag">HTML/CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    ><i class="fa-brands fa-github" aria-hidden="true"></i>
+                    Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-preview">
+                <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                <span class="project-preview-label">API Project</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Real-Time Drawing Website</h3>
+                <p class="project-desc">
+                  Real-time weather dashboard fetching data from OpenWeatherMap
+                  API. Displays current conditions and a 5-day forecast.
+                </p>
+                <div class="project-tags">
+                  <span class="tech-tag">HTML/CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">REST API</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    ><i class="fa-brands fa-github" aria-hidden="true"></i>
+                    Code</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i
+                      class="fa-solid fa-up-right-from-square"
+                      aria-hidden="true"
+                    ></i>
+                    Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-preview">
+                <i class="fa-solid fa-braille" aria-hidden="true"></i>
+                <span class="project-preview-label">Mini App</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Word Scribble Game</h3>
+                <p class="project-desc">
+                  A clean, responsive to-do app with drag-and-drop reordering,
+                  priority labels, and local storage persistence.
+                </p>
+                <div class="project-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">LocalStorage</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    ><i class="fa-brands fa-github" aria-hidden="true"></i>
+                    Code</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i
+                      class="fa-solid fa-up-right-from-square"
+                      aria-hidden="true"
+                    ></i>
+                    Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ EDUCATION ═══════════════ -->
+      <section id="education" aria-labelledby="edu-heading">
+        <div class="container">
+          <span class="section-label reveal">Background</span>
+          <h2 class="section-title reveal" id="edu-heading">Education</h2>
+
+          <div class="timeline">
+            <div class="tl-item reveal">
+              <div class="tl-dot"></div>
+              <p class="tl-year">2022 – 2026 (Expected)</p>
+              <h3 class="tl-title">B.Tech in Information Technology</h3>
+              <p class="tl-org">
+                Netaji Subhash Engineering College, Kolkata, West Bengal
+              </p>
+              <p class="tl-body">
+                Currently in my final year, with coursework spanning data
+                structures, algorithms, database management, web development,
+                operating systems, and computer networks.
+              </p>
+              <span class="tl-badge">Currently Enrolled</span>
+            </div>
+            <div class="tl-item reveal" style="transition-delay: 80ms">
+              <div class="tl-dot"></div>
+              <p class="tl-year">2020 – 2022</p>
+              <h3 class="tl-title">Higher Secondary (Class XII)</h3>
+              <p class="tl-org">British English School, Gaya, Bihar</p>
+              <p class="tl-body">
+                Completed higher secondary education with a focus on science and
+                mathematics, building the analytical foundation that drives my
+                engineering studies.
+              </p>
+            </div>
+            <div class="tl-item reveal" style="transition-delay: 160ms">
+              <div class="tl-dot"></div>
+              <p class="tl-year">2022</p>
+              <h3 class="tl-title">Matriculation (Class X)</h3>
+              <p class="tl-org">British English School, Gaya, Bihar</p>
+              <p class="tl-body">
+                Strong academic foundation with a focus on logical reasoning and
+                problem-solving.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ CERTIFICATIONS ═══════════════ -->
+      <section
+        id="certifications"
+        class="certs-section"
+        aria-labelledby="certs-heading"
+      >
+        <div class="container">
+          <span class="section-label reveal">Credentials</span>
+          <h2 class="section-title reveal" id="certs-heading">
+            Certifications
+          </h2>
+
+          <div class="certs-toolbar reveal">
+            <input
+              class="certs-search"
+              type="search"
+              id="certsSearch"
+              placeholder="Search certifications…"
+              aria-label="Search certifications"
+            />
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Google">Google</button>
+            <button class="filter-btn" data-filter="Meta">Meta</button>
+            <button class="filter-btn" data-filter="NPTEL">NPTEL</button>
+          </div>
+
+          <div class="certs-grid reveal" id="certsGrid">
+            <article class="cert-card" data-org="Google">
+              <p class="cert-org-badge">
+                <i class="fa-brands fa-google" aria-hidden="true"></i> Google
+              </p>
+              <h3 class="cert-title">
+                Google UX Design Professional Certificate
+              </h3>
+              <p class="cert-meta">
+                Issued: Jan 2024 · No Expiry · ID: GUX-2024-001
+              </p>
+              <div class="cert-skills">
+                <span class="cert-skill-tag">UX Research</span
+                ><span class="cert-skill-tag">Prototyping</span
+                ><span class="cert-skill-tag">Figma</span>
+              </div>
+              <a
+                href="https://coursera.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cert-verify-btn"
+                ><i
+                  class="fa-solid fa-up-right-from-square"
+                  aria-hidden="true"
+                ></i>
+                Verify Certificate</a
+              >
+            </article>
+            <article class="cert-card" data-org="Meta">
+              <p class="cert-org-badge">
+                <i class="fa-brands fa-meta" aria-hidden="true"></i> Meta
+              </p>
+              <h3 class="cert-title">Meta Front-End Developer Certificate</h3>
+              <p class="cert-meta">
+                Issued: Mar 2024 · No Expiry · ID: META-FE-0342
+              </p>
+              <div class="cert-skills">
+                <span class="cert-skill-tag">React</span
+                ><span class="cert-skill-tag">HTML/CSS</span
+                ><span class="cert-skill-tag">JavaScript</span>
+              </div>
+              <a
+                href="https://coursera.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cert-verify-btn"
+                ><i
+                  class="fa-solid fa-up-right-from-square"
+                  aria-hidden="true"
+                ></i>
+                Verify Certificate</a
+              >
+            </article>
+            <article class="cert-card" data-org="NPTEL">
+              <p class="cert-org-badge">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                NPTEL
+              </p>
+              <h3 class="cert-title">Programming in Java — NPTEL</h3>
+              <p class="cert-meta">
+                Issued: Dec 2023 · No Expiry · ID: NPTEL23CS45
+              </p>
+              <div class="cert-skills">
+                <span class="cert-skill-tag">Java</span
+                ><span class="cert-skill-tag">OOP</span
+                ><span class="cert-skill-tag">Data Structures</span>
+              </div>
+              <a
+                href="https://nptel.ac.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cert-verify-btn"
+                ><i
+                  class="fa-solid fa-up-right-from-square"
+                  aria-hidden="true"
+                ></i>
+                Verify Certificate</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ CONTACT ═══════════════ -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <span class="section-label reveal">Say hello</span>
+          <h2 class="section-title reveal" id="contact-heading">
+            Let's connect
+          </h2>
+
+          <div class="contact-grid reveal">
+            <div>
+              <p class="contact-blurb">
+                I'm open to new opportunities, collaborations, or simply a
+                friendly conversation. Whether you have a project in mind, a
+                question, or want to connect — feel free to reach out. I
+                typically respond within 1–2 business days.
+              </p>
+              <div class="social-links" role="list">
+                <a
+                  href="https://github.com/am4n-kmr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  role="listitem"
+                  ><i class="fa-brands fa-github" aria-hidden="true"></i
+                  ><span>github.com/am4n-kmr</span
+                  ><i
+                    class="fa-solid fa-arrow-right sl-arrow"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  role="listitem"
+                  ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+                  ><span>LinkedIn</span
+                  ><i
+                    class="fa-solid fa-arrow-right sl-arrow"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+                <a
+                  href="mailto:amankumar@example.com"
+                  class="social-link"
+                  role="listitem"
+                  ><i class="fa-solid fa-envelope" aria-hidden="true"></i
+                  ><span>amankumar@example.com</span
+                  ><i
+                    class="fa-solid fa-arrow-right sl-arrow"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="contact-form-wrap"
+              role="form"
+              aria-label="Contact form"
+            >
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  placeholder="What's on your mind?"
+                  required
+                ></textarea>
+              </div>
+              <button type="button" class="form-submit" id="formSubmit">
+                Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="footer-logo"
+        >AK<span style="color: var(--accent)">.</span></span
+      >
+      <span class="footer-copy">© 2026 Aman Kumar · Built with care</span>
+    </footer>
+
+    <script>
+      /* ── Theme toggle ── */
+      const html = document.documentElement;
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+
+      function setTheme(t) {
+        html.setAttribute("data-theme", t);
+        localStorage.setItem("theme", t);
+        themeIcon.className =
+          t === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+        themeToggle.setAttribute(
+          "aria-label",
+          t === "dark" ? "Switch to light mode" : "Switch to dark mode",
+        );
+      }
+
+      // init from storage or default dark
+      const saved = localStorage.getItem("theme") || "dark";
+      setTheme(saved);
+
+      themeToggle.addEventListener("click", () => {
+        setTheme(html.getAttribute("data-theme") === "dark" ? "light" : "dark");
+      });
+
+      /* ── Scroll progress ── */
+      const progressBar = document.getElementById("progress-bar");
+      const navbar = document.getElementById("navbar");
+      window.addEventListener(
+        "scroll",
+        () => {
+          const pct =
+            window.scrollY / (document.body.scrollHeight - window.innerHeight);
+          progressBar.style.width = pct * 100 + "%";
+          navbar.classList.toggle("scrolled", window.scrollY > 20);
+        },
+        { passive: true },
+      );
+
+      /* ── Reveal on scroll ── */
+      const circumference = 2 * Math.PI * 35; // r=35
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            e.target.classList.add("visible");
+            e.target.querySelectorAll(".ring-fill").forEach((ring) => {
+              const pct = Number(ring.dataset.pct) / 100;
+              ring.style.strokeDasharray = circumference;
+              ring.style.strokeDashoffset = circumference * (1 - pct);
+            });
+            e.target.querySelectorAll(".diff-bar-fill").forEach((bar) => {
+              const total = 120;
+              bar.style.width = (Number(bar.dataset.w) / total) * 100 + "%";
+            });
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      /* ── Nav active state ── */
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-links a");
+      const navObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              navLinks.forEach((a) =>
+                a.classList.toggle(
+                  "active",
+                  a.getAttribute("href") === "#" + e.target.id,
+                ),
+              );
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" },
+      );
+      sections.forEach((s) => navObs.observe(s));
+
+      /* ── Mobile nav ── */
+      const menuBtn = document.getElementById("menuBtn");
+      const navDrawer = document.getElementById("navDrawer");
+      const drawerClose = document.getElementById("drawerClose");
+      function openDrawer() {
+        navDrawer.classList.add("open");
+        menuBtn.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+      }
+      function closeDrawer() {
+        navDrawer.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
+      menuBtn.addEventListener("click", openDrawer);
+      drawerClose.addEventListener("click", closeDrawer);
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeDrawer();
+      });
+
+      /* ── Certs filter ── */
+      const certsSearch = document.getElementById("certsSearch");
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      let activeFilter = "all";
+      function filterCerts() {
+        const q = certsSearch.value.toLowerCase();
+        document.querySelectorAll(".cert-card").forEach((card) => {
+          const matchOrg =
+            activeFilter === "all" || card.dataset.org === activeFilter;
+          const matchQ = card.textContent.toLowerCase().includes(q);
+          card.classList.toggle("hidden", !(matchOrg && matchQ));
+        });
+      }
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          activeFilter = btn.dataset.filter;
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          filterCerts();
+        });
+      });
+      certsSearch.addEventListener("input", filterCerts);
+
+      /* ── Contact form ── */
+      document
+        .getElementById("formSubmit")
+        .addEventListener("click", function () {
+          const n = document.getElementById("contact-name").value.trim();
+          const e = document.getElementById("contact-email").value.trim();
+          const m = document.getElementById("contact-message").value.trim();
+          if (!n || !e || !m) {
+            this.textContent = "Please fill all fields";
+            this.style.background = "#888";
+            setTimeout(() => {
+              this.textContent = "Send Message";
+              this.style.background = "";
+            }, 2200);
+            return;
+          }
+          this.textContent = "✓ Message sent!";
+          this.style.background = "#22c55e";
+          this.disabled = true;
+        });
+    </script>
+  </body>
+</html>
