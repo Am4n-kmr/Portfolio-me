@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A professional and responsive portfolio website built using HTML, CSS, and JavaScript. This website serves as a central hub to showcase my skills, projects, achievements, and contact information.
+A professional and responsive portfolio website built using HTML and CSS. This website serves as a central hub to showcase my skills, projects, achievements, and contact information.
 
 ## Overview
 
@@ -20,7 +20,6 @@ The portfolio is designed with a focus on simplicity, performance, and user expe
 
 * HTML5
 * CSS3
-* JavaScript (ES6)
 
 ## Project Structure
 
